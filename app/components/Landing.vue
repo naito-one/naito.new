@@ -6,7 +6,7 @@
       <img
         :alt="$t('nuxtSiteConfig.name')"
         src="/images/logo.svg"
-        class="mx-8 mt-8 max-w-lg"
+        class="mx-8 mt-8 max-w-lg select-none"
       />
       <h1
         class="mx-8 mt-4 text-center text-lg font-light sm:text-xl lg:text-2xl"
@@ -20,9 +20,9 @@
         <!-- Hero image-->
         <div class="parallax-10 relative mx-8 inline-block">
           <img
-            :src="YhrelColor"
+            :src="Yhrel"
             alt="Yhrel"
-            class="w-full max-w-lg mask-[url(/images/yhrel-alpha.jpg)] mask-luminance mask-cover"
+            class="w-full max-w-lg select-none"
           />
           <div
             class="absolute top-1/2 left-0 flex h-1/2 w-full flex-col items-center justify-center text-center text-white"
@@ -71,7 +71,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import YhrelColor from '~/assets/images/yhrel-color.jpg'
+import Yhrel from '~/assets/images/yhrel.webp'
 import { sections } from '~/sections'
 </script>
 <style>
@@ -85,7 +85,7 @@ import { sections } from '~/sections'
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url(/images/header-bg.jpg);
+  background: url(/images/header-bg.webp);
   background-size: cover;
   background-position: center center;
   transform: translateZ(-0.5px) scale(1.6);

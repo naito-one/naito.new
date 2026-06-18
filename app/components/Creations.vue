@@ -1,7 +1,7 @@
 <template>
   <div
     :id="sections[0]!.long"
-    class="relative z-10 -mt-16 flex h-60 w-full items-center justify-center gap-4 bg-[url(/images/mid-color.jpg)] mask-[url(/images/mid-alpha.jpg)] bg-size-[auto_100%] bg-center mask-luminance mask-size-[auto_100%] mask-center text-white md:h-72"
+    class="relative z-10 -mt-16 flex h-60 w-full items-center justify-center gap-4 bg-[url(/images/mid.webp)] bg-size-[auto_100%] bg-center text-white md:h-72"
   >
     <Icon
       class="shrink-0 text-3xl md:text-[2.5rem]"
