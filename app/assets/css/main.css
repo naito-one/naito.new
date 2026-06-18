@@ -10,6 +10,9 @@
   --color-nt1-orange-dark: #ffaa56;
   --color-nt1-offwhite: #dbd5eb;
   --text-2xs: 0.625rem;
+  --shadow-xl-wide:
+    0 10px 25px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.12)),
+    0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.12));
 }
 
 .parallax-10 {
@@ -45,5 +48,75 @@
     transform: translateX(0);
     opacity: 1;
     pointer-events: initial;
+  }
+}
+
+.just-text {
+  ul {
+    @apply ml-8 list-disc leading-relaxed font-light;
+
+    @media (width >= 48rem /* md */) {
+      max-width: calc(100% - 220px);
+    }
+  }
+
+  p {
+    @apply leading-relaxed font-light;
+  }
+
+  p:not(:last-of-type) {
+    @apply mb-4;
+  }
+
+  h4 {
+    @apply mb-3 text-2xl;
+
+    @media (width >= 48rem /* md */) {
+      @apply text-3xl;
+    }
+  }
+
+  h5 {
+    @apply mt-8 mb-3 text-xl;
+
+    @media (width >= 48rem /* md */) {
+      @apply text-2xl;
+    }
+  }
+}
+
+.notice-me {
+  overflow: hidden;
+  &::after {
+    content: '';
+    background-color: white;
+    width: 10%;
+    height: 250%;
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    opacity: 0;
+    transform: rotate(30deg);
+    filter: blur(20px);
+    animation: notice-me infinite 4s linear;
+    animation-delay: 4s;
+  }
+}
+
+@keyframes notice-me {
+  0% {
+    left: -20%;
+    opacity: 0;
+    transform: rotate(30deg);
+  }
+  10%,
+  20% {
+    opacity: 1;
+  }
+  30%,
+  100% {
+    left: 120%;
+    opacity: 0;
+    transform: rotate(50deg);
   }
 }

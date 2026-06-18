@@ -1,9 +1,21 @@
-import { ContentBeatenimmoEn, ContentBeatenimmoFr } from '#components'
+import {
+  ContentBeaEn,
+  ContentBeaFr,
+  ContentCxEn,
+  ContentCxFr,
+  ContentMedisEn,
+  ContentMedisFr,
+  ContentMrEn,
+  ContentMrFr,
+  ContentViskarEn,
+  ContentViskarFr,
+} from '#components'
 import type { Component } from 'vue'
 import type { Locale } from 'vue-i18n'
 
 export interface ShowcaseParams {
   slug: string
+  name: string
   content: { [x in Locale]: Component }
   media: string[]
   link: string
@@ -13,15 +25,17 @@ export interface ShowcaseParams {
 }
 
 let count = 0
+const imgRoot = '/images/showcases'
 
 export const showcases: ShowcaseParams[] = [
   {
     slug: 'bea',
+    name: 'BeatenIMMO',
     content: {
-      en: ContentBeatenimmoEn,
-      fr: ContentBeatenimmoFr,
+      en: ContentBeaEn,
+      fr: ContentBeaFr,
     },
-    media: [],
+    media: [`${imgRoot}/bea-01.webp`, `${imgRoot}/bea-02.webp`],
     link: 'https://beatenimmo.ch',
     accentColor: '#00BBA7',
     dark: true,
@@ -29,11 +43,12 @@ export const showcases: ShowcaseParams[] = [
   },
   {
     slug: 'medis',
+    name: 'EstheMedis',
     content: {
-      en: ContentBeatenimmoEn,
-      fr: ContentBeatenimmoFr,
+      en: ContentMedisEn,
+      fr: ContentMedisFr,
     },
-    media: [],
+    media: [`${imgRoot}/medis-01.webp`],
     link: 'https://esthemedis.ch',
     accentColor: '#675A5A',
     dark: true,
@@ -41,11 +56,12 @@ export const showcases: ShowcaseParams[] = [
   },
   {
     slug: 'cx',
+    name: 'C’XOLOGUE',
     content: {
-      en: ContentBeatenimmoEn,
-      fr: ContentBeatenimmoFr,
+      en: ContentCxEn,
+      fr: ContentCxFr,
     },
-    media: [],
+    media: [`${imgRoot}/cx-01.webp`],
     link: 'https://cxologue.ch',
     accentColor: '#702D5A',
     dark: true,
@@ -53,11 +69,12 @@ export const showcases: ShowcaseParams[] = [
   },
   {
     slug: 'viskar',
+    name: 'Visual KARSYS',
     content: {
-      en: ContentBeatenimmoEn,
-      fr: ContentBeatenimmoFr,
+      en: ContentViskarEn,
+      fr: ContentViskarFr,
     },
-    media: [],
+    media: [`${imgRoot}/viskar-01.webp`],
     link: 'https://visualkarsys.com',
     accentColor: '#F8E71C',
     dark: false,
@@ -65,11 +82,12 @@ export const showcases: ShowcaseParams[] = [
   },
   {
     slug: 'mr',
+    name: 'Mr. Bidouille',
     content: {
-      en: ContentBeatenimmoEn,
-      fr: ContentBeatenimmoFr,
+      en: ContentMrEn,
+      fr: ContentMrFr,
     },
-    media: [],
+    media: [`${imgRoot}/mr-01.webp`],
     link: 'https://mrbidouille.ch',
     accentColor: '#B62C6D',
     dark: true,

@@ -19,11 +19,7 @@
       >
         <!-- Hero image-->
         <div class="parallax-10 relative mx-8 inline-block">
-          <img
-            :src="Yhrel"
-            alt="Yhrel"
-            class="w-full max-w-lg select-none"
-          />
+          <img :src="Yhrel" alt="Yhrel" class="w-full max-w-lg select-none" />
           <div
             class="absolute top-1/2 left-0 flex h-1/2 w-full flex-col items-center justify-center text-center text-white"
           >
@@ -43,7 +39,8 @@
               v-for="link in sections"
               :key="link.long"
               :href="`#${link.long}`"
-              class="bg-nt1-violet-dark flex items-center rounded-xl px-6 py-3 font-medium text-white shadow-lg transition duration-200 hover:shadow-xl hover:brightness-110 active:shadow-lg active:brightness-95"
+              class="bg-nt1-violet-dark hover:shadow-xl-wide flex items-center rounded-xl px-6 py-3 font-medium text-white shadow-lg transition duration-200 hover:brightness-110 active:shadow-lg active:brightness-95"
+              :class="{ 'notice-me': link.highlight }"
             >
               <Icon class="mr-2 shrink-0" :name="link.icon" />
               {{ $t(link.short) }}

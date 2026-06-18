@@ -20,4 +20,5 @@ export default {
   contactShort: 'Contact',
   contact: 'Contact us',
   visitWebsite: 'Visit Website',
+  showcaseMediaAlt: 'Preview n°{n} of {name}',
 }
