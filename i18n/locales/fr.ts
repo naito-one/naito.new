@@ -1,0 +1,24 @@
+export default {
+  nuxtSiteConfig: {
+    name: 'Naito One',
+    description: 'Des sites web Beaux et Efficaces',
+  },
+  previous: 'Slide précédente',
+  next: 'Slide suivante',
+  senior: 'Dev Full-Stack Senior',
+  ceo: 'PDG Naito One',
+  beautiful: 'Beau',
+  whyBeautiful1: 'Discret mais saisissant. Naturellement intrigant.',
+  whyBeautiful2: 'Un lieu où votre public a envie de rester.',
+  efficient: 'Efficace',
+  whyEfficient1:
+    'Fait ce dont vous avez besoin, sans ce dont vous vous passez.',
+  whyEfficient2: 'Agréable pour les visiteurs, léger pour les serveurs.',
+  creationsShort: 'Créations',
+  creations: 'Quelques-unes de nos créations',
+  valuesShort: 'Valeurs',
+  values: 'Nos valeurs',
+  contactShort: 'Contact',
+  contact: 'Nous contacter',
+  visitWebsite: 'Visiter le Site',
+}

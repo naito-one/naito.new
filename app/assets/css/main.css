@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-header: 'MomoTrustDisplay', 'sans-serif';
+  --font-content: 'MomoTrustSans', 'sans-serif';
+
+  --color-nt1-violet-light: #c7a3f7;
+  --color-nt1-violet-dark: #ba5be8;
+  --color-nt1-orange-light: #ffdc5b;
+  --color-nt1-orange-dark: #ffaa56;
+  --color-nt1-offwhite: #dbd5eb;
+  --text-2xs: 0.625rem;
+}
+
+.parallax-10 {
+  transform: translateZ(-0.1px) scale(1.1);
+}
+.parallax-25 {
+  transform: translateZ(-0.25px) scale(1.25);
+}
+.parallax-50 {
+  transform: translateZ(-0.5px) scale(1.5);
+}
+.parallax-100 {
+  transform: translateZ(-1px) scale(2);
+}
+
+.auto-slide {
+  animation: auto-slide alternate infinite 6s ease-in-out;
+}
+
+.delayed-animation {
+  animation-delay: -6s;
+}
+
+@keyframes auto-slide {
+  0%,
+  50% {
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  60%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: initial;
+  }
+}

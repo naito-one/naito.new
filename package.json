@@ -1,0 +1,54 @@
+{
+  "name": "naito.new",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/material-symbols": "^1.2.42",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "2.0.0",
+    "@nuxt/image": "1.11.0",
+    "@nuxtjs/i18n": "10.0.6",
+    "@nuxtjs/seo": "^3.1.0",
+    "@tailwindcss/vite": "^4.1.12",
+    "bezier-easing": "^2.1.0",
+    "lodash.throttle": "^4.1.1",
+    "nuxt": "^4.0.3",
+    "tailwindcss": "^4.1.12",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.5.30",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/lodash.throttle": "^4.1.9",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "sass": "^1.92.1"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux"
+      ],
+      "cpu": [
+        "current",
+        "x64"
+      ]
+    },
+    "overrides": {
+      "sharp": "0.33.4"
+    },
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "core-js",
+      "sharp"
+    ]
+  }
+}

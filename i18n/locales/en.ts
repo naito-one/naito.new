@@ -1,0 +1,23 @@
+export default {
+  nuxtSiteConfig: {
+    name: 'Naito One',
+    description: 'Beautiful and Efficient websites',
+  },
+  previous: 'Previous slide',
+  next: 'Next slide',
+  senior: 'Senior Full-Stack Dev',
+  ceo: 'Naito One CEO',
+  beautiful: 'Beautiful',
+  whyBeautiful1: 'Quietly striking. Naturally intriguing.',
+  whyBeautiful2: 'A place your audience wants to stay in.',
+  efficient: 'Efficient',
+  whyEfficient1: "Does what you need, leaves out what you don't.",
+  whyEfficient2: 'Kind to visitors, light on servers.',
+  creationsShort: 'Creations',
+  creations: 'Some of our creations',
+  valuesShort: 'Values',
+  values: 'Our values',
+  contactShort: 'Contact',
+  contact: 'Contact us',
+  visitWebsite: 'Visit Website',
+}
