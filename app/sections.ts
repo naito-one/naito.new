@@ -1,9 +1,11 @@
-export const sections: {
+export interface Section {
   short: string
   long: string
   icon: string
   highlight: boolean
-}[] = [
+}
+
+export const sections: Section[] = [
   {
     short: 'creationsShort',
     long: 'creations',

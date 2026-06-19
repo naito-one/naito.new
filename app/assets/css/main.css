@@ -120,3 +120,37 @@
     transform: rotate(50deg);
   }
 }
+
+.with-bg::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  transform: translateZ(-0.5px) scale(1.6);
+}
+
+.header-bg::after {
+  background: url(/images/header-bg.webp);
+}
+
+.values-bg::after {
+  background: url(/images/values-bg.webp);
+}
+
+.with-overlay::after {
+  @apply bg-neutral-100/70;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-0.5px) scale(1.6);
+}

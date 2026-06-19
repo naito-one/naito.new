@@ -1,6 +1,8 @@
 <template>
   <Landing />
   <Creations />
+  <Values />
+  <Contact />
 </template>
 <script setup lang="ts">
 defineOgImageComponent('NaitoOne', {

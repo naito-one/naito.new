@@ -21,4 +21,36 @@ export default {
   contact: 'Contact us',
   visitWebsite: 'Visit Website',
   showcaseMediaAlt: 'Preview n°{n} of {name}',
+  allValues: {
+    fast: {
+      header: 'Fast web',
+      content:
+        'No bloat, no backend unless necessary, efficient by design, optimized code and assets.',
+    },
+    safe: {
+      header: 'Safe web',
+      content:
+        'Minimal dependencies, no CMS/admin panels unless necessary, code and infrastructure safety by design.',
+    },
+    private: {
+      header: 'Private web',
+      content:
+        'No cookies unless necessary, tracking only with informed consent, go beyond privacy laws, mostly-working websites without JavaScript.',
+    },
+    future: {
+      header: 'Future-proof web',
+      content:
+        'Minimal dependencies, no CMS/admin panels unless necessary, latest stable tech, readable & easy to migrate source code, open source stacks.',
+    },
+    inclusive: {
+      header: 'Inclusive web',
+      content:
+        'Accessibility, multilangual, light/dark themes, support for old & slow devices, support for all major browsers, mostly-working websites without JavaScript.',
+    },
+    proud: {
+      header: 'Proud web',
+      content:
+        'No websites for violent/exploitative/dishonest activities, no AI content slop, no AI training from our client’s content, no sneaky profiling, human-readable policies, sharing of code & resources & knowledge. Contribution to open source projects.',
+    },
+  },
 }

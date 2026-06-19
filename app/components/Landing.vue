@@ -1,5 +1,5 @@
 <template>
-  <div class="with-bg relative flex">
+  <div class="with-bg header-bg relative flex">
     <div
       class="with-overlay flex min-h-screen w-full flex-col items-center pb-20 sm:pb-32 lg:justify-center lg:pb-20"
     >
@@ -71,32 +71,3 @@
 import Yhrel from '~/assets/images/yhrel.webp'
 import { sections } from '~/sections'
 </script>
-<style>
-@reference "~/assets/css/main.css";
-.with-bg::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url(/images/header-bg.webp);
-  background-size: cover;
-  background-position: center center;
-  transform: translateZ(-0.5px) scale(1.6);
-}
-
-.with-overlay::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  @apply bg-neutral-100/70;
-  transform: translateZ(-0.5px) scale(1.6);
-}
-</style>
