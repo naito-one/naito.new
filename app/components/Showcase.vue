@@ -19,7 +19,14 @@
         </a></component
       >
     </div>
-    <div class="flex grow basis-0 flex-col-reverse gap-4 md:flex-col md:gap-0">
+    <div
+      class="flex grow basis-0 flex-col-reverse gap-4 md:flex-col md:gap-0"
+      @mouseenter="noTimeout()"
+      @mouseleave="timeoutToScroll()"
+      @touchstart="noTimeout()"
+      @touchend="timeoutToScroll()"
+      @touchcancel="timeoutToScroll()"
+    >
       <ul
         class="flex w-full snap-x snap-mandatory scrollbar-none overflow-x-auto"
         ref="slider"
@@ -72,6 +79,7 @@ const slider = useTemplateRef('slider')
 const ratio = ref(0)
 const numItems = computed(() => slider.value?.childElementCount ?? 0)
 const index = ref(0)
+let timeout: ReturnType<typeof setTimeout> | undefined = undefined
 
 function goTo(event: MouseEvent, i: number) {
   event.preventDefault()
@@ -110,29 +118,72 @@ function saveInHash() {
   router.replace({ hash: `#${props.slug}-${index.value + 1}` })
 }
 
+function noTimeout() {
+  return Promise.resolve().then(() => {
+    clearTimeout(timeout)
+    timeout = undefined
+  })
+}
+
+function timeoutToScroll() {
+  // uncomment next line to disable auto scroll
+  // return
+  return Promise.resolve().then(async () => {
+    await noTimeout()
+    timeout = setTimeout(() => {
+      next()
+      timeoutToScroll()
+    }, 4000)
+  })
+}
+
 const onresize = () => {
   ratio.value = (slider.value?.scrollWidth ?? 0) / numItems.value
 }
+
+let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   window.addEventListener('resize', onresize)
   onresize()
 
-  slider.value?.addEventListener(
-    'touchend',
-    () => {
-      setTimeout(() => {
-        index.value = Math.round((slider.value?.scrollLeft ?? 0) / ratio.value)
-        saveInHash()
-      }, 500)
-    },
-    {
-      passive: true,
-    },
-  )
+  if (slider.value) {
+    slider.value.addEventListener(
+      'touchend',
+      () => {
+        setTimeout(() => {
+          index.value = Math.round(
+            (slider.value?.scrollLeft ?? 0) / ratio.value,
+          )
+          saveInHash()
+        }, 500)
+      },
+      {
+        passive: true,
+      },
+    )
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.target === slider.value) {
+            if (entry.isIntersecting) {
+              timeoutToScroll()
+            } else {
+              noTimeout()
+            }
+            break
+          }
+        }
+      },
+      { threshold: 0.5 },
+    )
+    observer.observe(slider.value)
+  }
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', onresize)
+  observer?.disconnect()
 })
 </script>
