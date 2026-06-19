@@ -4,6 +4,8 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
+import '~/scrollEndPolyfill'
+
 const { t } = useI18n()
 
 useHead({
