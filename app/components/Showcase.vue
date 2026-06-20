@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`flex flex-col-reverse items-center gap-16 xl:flex-row ${reverse ? 'xl:flex-row-reverse' : ''}`"
+    :class="`flex flex-col-reverse items-center gap-8 xl:flex-row xl:gap-16 ${reverse ? 'xl:flex-row-reverse' : ''}`"
   >
     <div class="grow basis-0">
       <component :is="content[$i18n.locale]">
@@ -60,7 +60,7 @@
           v-for="(m, i) in media"
           :key="m"
           :id="`${slug}-${i + 1}`"
-          class="flex w-full shrink-0 snap-start items-start justify-center scroll-smooth md:items-center"
+          class="flex w-full shrink-0 snap-start items-center justify-center scroll-smooth"
         >
           <img :src="m" :alt="$t('showcaseMediaAlt', { name, n: i + 1 })" />
         </li>
