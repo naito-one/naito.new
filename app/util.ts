@@ -1,3 +1,5 @@
+const MAX_VALUE_32BIT = Math.pow(2, 32)
+
 /**
  * 128-bit hash for seed generation
  */
@@ -27,6 +29,9 @@ function cyrb128(str: string): [number, number, number, number] {
  * sfc32 is part of the PractRand random number testing suite (which it passes of course). sfc32 has a 128-bit state and is very fast in JS.
  */
 function sfc32(a: number, b: number, c: number, d: number) {
+  /**
+   * Deterministic random number between 0 (inclusive) and 1 (exclusive)
+   */
   return function () {
     a |= 0
     b |= 0
@@ -38,9 +43,9 @@ function sfc32(a: number, b: number, c: number, d: number) {
     b = (c + (c << 3)) | 0
     c = (c << 21) | (c >>> 11)
     c = (c + t) | 0
-    return (t >>> 0) / 4294967296
+    return (t >>> 0) / MAX_VALUE_32BIT
   }
 }
-const buildSeed = '20260211_0'
+const buildSeed = '20260620_0'
 
 export const seededRand = (str: string) => sfc32(...cyrb128(str + buildSeed))

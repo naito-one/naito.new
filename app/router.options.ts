@@ -2,10 +2,6 @@ import type { RouterConfig } from '@nuxt/schema'
 
 export default {
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    }
-
     if (history.state?.canScroll === false) {
       return false
     }
@@ -17,12 +13,16 @@ export default {
       if (el) {
         const style = getComputedStyle(el)
         return {
-          el: to.hash,
+          el,
           top: parseFloat(style.scrollMarginTop),
           left: parseFloat(style.scrollMarginLeft),
           behavior,
         }
       }
+    }
+
+    if (savedPosition) {
+      return savedPosition
     }
 
     return { top: 0, left: 0, behavior }
