@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 <template>
-  <Body class="bg-nt1-offwhite font-content text-stone-800">
+  <Body class="bg-nt1-offwhite font-content text-nt1-offblack dark:bg-black">
+    <Switcher />
     <slot />
   </Body>
 </template>

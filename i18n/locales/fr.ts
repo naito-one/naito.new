@@ -56,4 +56,6 @@ export default {
   },
   contactTagLine:
     'Vous souhaitez mettre votre projet entre de bonnes mains ? Envoyez-nous un email !',
+  dark: 'Passez en mode sombre',
+  light: 'Passer en mode clair',
 }

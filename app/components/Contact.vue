@@ -1,8 +1,8 @@
 <template>
   <SectionHeader v-bind="sections[2]!" />
-  <div class="bg-nt1-offwhite -mt-16 pb-2 sm:pb-4 md:pb-[10vh]">
+  <div class="bg-nt1-offwhite -mt-16 pb-2 sm:pb-4 md:pb-[10vh] dark:bg-black">
     <div
-      class="mx-2 flex flex-col items-center rounded-b-2xl bg-white px-4 pt-20 sm:mx-4 sm:px-8 md:mx-auto md:w-2xl lg:w-4xl xl:w-5xl"
+      class="dark:bg-nt1-offblack mx-2 flex flex-col items-center rounded-b-2xl bg-white px-4 pt-20 sm:mx-4 sm:px-8 md:mx-auto md:w-2xl lg:w-4xl xl:w-5xl dark:text-white"
     >
       <h4 class="mb-4 text-center text-3xl">{{ $t('contactTagLine') }}</h4>
 
@@ -28,9 +28,7 @@
           </p>
         </template>
       </div>
-      <div
-        class="relative inline-block transition duration-200 hover:brightness-110"
-      >
+      <div class="relative inline-block">
         <img src="/images/mail.webp" alt="Mail" class="select-none" />
 
         <a

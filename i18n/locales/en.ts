@@ -55,4 +55,6 @@ export default {
   },
   contactTagLine:
     'Want to put your project in good hands ? Shoot us an email !',
+  dark: 'Switch to dark theme',
+  light: 'Switch to light theme',
 }

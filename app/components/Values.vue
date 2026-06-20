@@ -1,14 +1,16 @@
 <template>
   <SectionHeader v-bind="sections[1]!" />
   <div class="with-bg values-bg relative -mt-16 flex py-24">
-    <div class="flex min-h-screen w-full items-center justify-center px-4">
+    <div
+      class="with-dark-overlay flex min-h-screen w-full items-center justify-center px-4"
+    >
       <ul
         class="flex flex-col items-start justify-center gap-12 md:flex-row md:flex-wrap"
       >
         <li
           v-for="value in values"
           :key="value.slug"
-          class="shadow-nt1-offwhite w-full overflow-hidden rounded-2xl bg-white shadow-2xl sm:w-md"
+          class="shadow-nt1-offwhite/50 dark:bg-nt1-offblack w-full overflow-hidden rounded-2xl bg-white shadow-2xl sm:w-md dark:text-white dark:shadow-black/50"
         >
           <div
             class="flex items-center gap-2 bg-linear-to-t from-[-20%] to-120% p-5"

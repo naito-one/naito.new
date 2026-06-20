@@ -9,7 +9,7 @@
         class="mx-8 mt-8 max-w-lg select-none"
       />
       <h1
-        class="mx-8 mt-4 text-center text-lg font-light sm:text-xl lg:text-2xl"
+        class="mx-8 mt-4 text-center text-lg font-light sm:text-xl lg:text-2xl dark:text-white"
       >
         {{ $t('nuxtSiteConfig.description') }}
       </h1>
@@ -50,7 +50,7 @@
               {{ $t(link.short) }}
             </a>
           </div>
-          <div class="relative">
+          <div class="relative dark:text-white">
             <div
               class="auto-slide delayed-animation absolute lg:static lg:animate-none!"
             >

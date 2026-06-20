@@ -9,11 +9,14 @@
   --color-nt1-orange-light: #ffdc5b;
   --color-nt1-orange-dark: #ffaa56;
   --color-nt1-offwhite: #dbd5eb;
+  --color-nt1-offblack: #261c29;
   --text-2xs: 0.625rem;
   --shadow-xl-wide:
     0 10px 25px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.12)),
     0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.12));
 }
+
+@custom-variant dark (&:where(:has(#dark-mode:checked), #dark-mode:checked ~ *, #dark-mode:checked ~ * *));
 
 /* Remove Chrome focus outline on loading an active anchor hash */
 :focus-visible {
@@ -53,16 +56,43 @@
   z-index: -1;
 }
 
+/* Custom CSS dark mode */
+#dark-mode:checked ~ * {
+  & .with-overlay::after {
+    @apply bg-neutral-800/90;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  & .with-dark-overlay::after {
+    @apply bg-neutral-800/50;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
 /* Parallax */
 
 /* Will match every device that isn't a smartphone with touch screen */
 @media (pointer: fine), (hover: hover) {
   html {
-    @apply h-full overflow-hidden;
+    @apply h-screen overflow-hidden;
   }
 
   body {
-    @apply h-full overflow-x-hidden overflow-y-auto perspective-[1px] transform-3d;
+    @apply h-screen overflow-x-hidden overflow-y-auto perspective-[1px] transform-3d;
   }
 
   body * {
@@ -96,6 +126,10 @@
   }
 
   .with-overlay::after {
+    transform: translateZ(-0.5px) scale(1.6);
+  }
+
+  .with-dark-overlay::after {
     transform: translateZ(-0.5px) scale(1.6);
   }
 }

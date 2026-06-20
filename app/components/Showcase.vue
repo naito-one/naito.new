@@ -8,7 +8,7 @@
           :href="link"
           target="__blank"
           referrerpolicy="no-referrer"
-          :class="`hover:shadow-xl-wide right-0 bottom-0 mt-8 inline-flex items-center rounded-xl px-6 py-3 font-medium shadow-lg transition duration-200 active:shadow-lg md:absolute md:mt-0 ${dark ? 'text-white hover:brightness-110 active:brightness-95' : 'hover:brightness-105 active:brightness-98'}`"
+          :class="`hover:shadow-xl-wide right-0 bottom-0 mt-8 inline-flex items-center rounded-xl px-6 py-3 font-medium shadow-lg transition duration-200 active:shadow-lg md:absolute md:mt-0 ${dark ? 'text-white hover:brightness-110 active:brightness-95' : 'text-black/80 hover:brightness-105 active:brightness-98'}`"
           :style="{ backgroundColor: accentColor }"
         >
           <Icon
@@ -77,7 +77,11 @@
             <a
               :href="`#${slug}-${i + 1}`"
               class="block size-2.5 rounded-full transition-colors"
-              :class="index === i ? 'bg-stone-800' : 'bg-stone-400'"
+              :class="
+                index === i
+                  ? 'bg-nt1-offblack dark:bg-white'
+                  : 'bg-nt1-offblack/50 dark:bg-white/50'
+              "
               @click="goTo($event, i)"
             ></a>
           </li>
