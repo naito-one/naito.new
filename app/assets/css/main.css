@@ -15,18 +15,78 @@
     0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.12));
 }
 
-.parallax-10 {
-  transform: translateZ(-0.1px) scale(1.1);
+.with-bg::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-size: cover;
+  background-position: center center;
 }
-.parallax-25 {
-  transform: translateZ(-0.25px) scale(1.25);
+
+.header-bg::after {
+  background-image: url(/images/header-bg.webp);
 }
-.parallax-50 {
-  transform: translateZ(-0.5px) scale(1.5);
+
+.values-bg::after {
+  background-image: url(/images/values-bg.webp);
 }
-.parallax-100 {
-  transform: translateZ(-1px) scale(2);
+
+.with-overlay::after {
+  @apply bg-neutral-100/70;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+
+/* Parallax */
+
+/* Will match every device that isn't a smartphone with touch screen */
+@media (pointer: fine), (hover: hover) {
+  html {
+    @apply h-full overflow-hidden;
+  }
+
+  body {
+    @apply h-full overflow-x-hidden overflow-y-auto perspective-[1px] transform-3d;
+  }
+
+  body * {
+    transform-style: inherit;
+  }
+
+  .parallax-10 {
+    transform: translateZ(-0.1px) scale(1.1);
+  }
+  .parallax-25 {
+    transform: translateZ(-0.25px) scale(1.25);
+  }
+  .parallax-50 {
+    transform: translateZ(-0.5px) scale(1.5);
+  }
+  .parallax-100 {
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .with-bg::after {
+    transform: translateZ(-0.5px) scale(1.6);
+  }
+
+  .with-overlay::after {
+    transform: translateZ(-0.5px) scale(1.6);
+  }
+}
+
+/* End Parallax */
 
 .auto-slide {
   animation: auto-slide alternate infinite 6s ease-in-out;
@@ -87,6 +147,7 @@
 
 .notice-me {
   overflow: hidden;
+  position: relative;
   &::after {
     content: '';
     background-color: white;
@@ -119,38 +180,4 @@
     opacity: 0;
     transform: rotate(50deg);
   }
-}
-
-.with-bg::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-position: center center;
-  transform: translateZ(-0.5px) scale(1.6);
-}
-
-.header-bg::after {
-  background: url(/images/header-bg.webp);
-}
-
-.values-bg::after {
-  background: url(/images/values-bg.webp);
-}
-
-.with-overlay::after {
-  @apply bg-neutral-100/70;
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(-0.5px) scale(1.6);
 }

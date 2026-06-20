@@ -68,6 +68,7 @@
   </section>
 </template>
 <script setup lang="ts">
+import type { RouteLocationNormalized } from 'vue-router'
 import type { ShowcaseParams } from '~/showcases'
 
 const router = useRouter()
@@ -115,7 +116,10 @@ function scrollToCurrent() {
 }
 
 function saveInHash() {
-  router.replace({ hash: `#${props.slug}-${index.value + 1}` })
+  router.replace({
+    hash: `#${props.slug}-${index.value + 1}`,
+    state: { canScroll: false },
+  })
 }
 
 function noTimeout() {
@@ -141,11 +145,29 @@ const onresize = () => {
   ratio.value = (slider.value?.scrollWidth ?? 0) / numItems.value
 }
 
+const onNavigate = (to: RouteLocationNormalized) => {
+  const hashStart = `#${props.slug}-`
+  if (to.hash.startsWith(hashStart)) {
+    const newIndex =
+      Math.max(
+        1,
+        Math.min(numItems.value, parseInt(to.hash.replace(hashStart, ''))),
+      ) - 1
+    if (!isNaN(newIndex) && newIndex !== index.value) {
+      index.value = newIndex
+      scrollToCurrent()
+    }
+  }
+}
+
 let observer: IntersectionObserver | null = null
+
+const stopAfterEach = router.afterEach(onNavigate)
 
 onMounted(() => {
   window.addEventListener('resize', onresize)
   onresize()
+  onNavigate(router.currentRoute.value)
 
   if (slider.value) {
     slider.value.addEventListener(
@@ -185,5 +207,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', onresize)
   observer?.disconnect()
+  stopAfterEach()
 })
 </script>
