@@ -20,7 +20,6 @@
   outline: none;
 }
 
-
 .with-bg::after {
   display: block;
   content: '';
@@ -70,6 +69,15 @@
     transform-style: inherit;
   }
 
+  .parallax-0 {
+    transform: translateZ(0px) scale(1);
+  }
+  .parallax-2 {
+    transform: translateZ(-0.02px) scale(1.02);
+  }
+  .parallax-5 {
+    transform: translateZ(-0.05px) scale(1.05);
+  }
   .parallax-10 {
     transform: translateZ(-0.1px) scale(1.1);
   }
