@@ -1,6 +1,6 @@
 <template>
   <div class="just-text relative">
-    <h4>Mr. Bidouille: casually stricking nerd’s blog</h4>
+    <h4>Mr. Bidouille: stricking casual nerd’s blog</h4>
     <p>
       Elegant, smooth, simple. This custom blog is designed for perfect SEO and
       effortless descovery of articles. The interface is in a single language,

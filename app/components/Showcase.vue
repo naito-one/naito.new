@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`flex flex-col items-center gap-16 xl:flex-row ${reverse ? 'xl:flex-row-reverse' : ''}`"
+    :class="`flex flex-col-reverse items-center gap-16 xl:flex-row ${reverse ? 'xl:flex-row-reverse' : ''}`"
   >
     <div class="grow basis-0">
       <component :is="content[$i18n.locale]">
@@ -21,11 +21,36 @@
     </div>
     <div
       class="flex grow basis-0 flex-col-reverse gap-4 md:flex-col md:gap-0"
-      @mouseenter="noTimeout()"
-      @mouseleave="timeoutToScroll()"
-      @touchstart="noTimeout()"
-      @touchend="timeoutToScroll()"
-      @touchcancel="timeoutToScroll()"
+      @mouseenter="
+        () => {
+          hovered = true
+          updateShouldRun()
+        }
+      "
+      @mouseleave="
+        () => {
+          hovered = false
+          updateShouldRun()
+        }
+      "
+      @touchstart="
+        () => {
+          hovered = true
+          updateShouldRun()
+        }
+      "
+      @touchend="
+        () => {
+          hovered = false
+          updateShouldRun()
+        }
+      "
+      @touchcancel="
+        () => {
+          hovered = false
+          updateShouldRun()
+        }
+      "
     >
       <ul
         class="flex w-full snap-x snap-mandatory scrollbar-none overflow-x-auto"
@@ -77,6 +102,8 @@ const props = defineProps<ShowcaseParams>()
 
 const slider = useTemplateRef('slider')
 
+const visible = ref(false)
+const hovered = ref(false)
 const ratio = ref(0)
 const numItems = computed(() => slider.value?.childElementCount ?? 0)
 const index = ref(0)
@@ -137,8 +164,18 @@ function timeoutToScroll() {
     timeout = setTimeout(() => {
       next()
       timeoutToScroll()
-    }, 4000)
+    }, 5000)
   })
+}
+
+function updateShouldRun() {
+  if (visible.value && !hovered.value) {
+    if (!timeout) {
+      timeoutToScroll()
+    }
+  } else {
+    noTimeout()
+  }
 }
 
 const onresize = () => {
@@ -189,11 +226,8 @@ onMounted(() => {
       (entries) => {
         for (const entry of entries) {
           if (entry.target === slider.value) {
-            if (entry.isIntersecting) {
-              timeoutToScroll()
-            } else {
-              noTimeout()
-            }
+            visible.value = entry.isIntersecting
+            updateShouldRun()
             break
           }
         }

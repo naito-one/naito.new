@@ -19,7 +19,11 @@
       >
         <!-- Hero image-->
         <div class="parallax-10 relative mx-8 inline-block">
-          <img :src="Yhrel" alt="Yhrel" class="w-full max-w-lg select-none" />
+          <img
+            src="/images/yhrel.webp"
+            alt="Yhrel"
+            class="w-full max-w-lg select-none"
+          />
           <div
             class="absolute top-1/2 left-0 flex h-1/2 w-full flex-col items-center justify-center text-center text-white"
           >
@@ -68,6 +72,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import Yhrel from '~/assets/images/yhrel.webp'
 import { sections } from '~/sections'
 </script>
