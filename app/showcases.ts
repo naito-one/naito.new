@@ -5,6 +5,8 @@ import {
   ContentCxFr,
   ContentMedisEn,
   ContentMedisFr,
+  ContentMetersEn,
+  ContentMetersFr,
   ContentMrEn,
   ContentMrFr,
   ContentViskarEn,
@@ -21,6 +23,7 @@ export interface ShowcaseParams {
   techs: Tech[]
   media: string[]
   link: string
+  isContact?: boolean
   accentColor: string
   dark: boolean
   reverse: boolean
@@ -64,6 +67,37 @@ export const showcases: ShowcaseParams[] = [
     link: 'https://visualkarsys.com',
     accentColor: '#F8E71C',
     dark: false,
+    reverse: ++count % 2 === 0,
+  },
+  {
+    slug: 'meters',
+    name: 'Meters',
+    content: {
+      en: ContentMetersEn,
+      fr: ContentMetersFr,
+    },
+    techs: [
+      techs.nuxt,
+      techs.vue,
+      techs.tailwind,
+      techs.laravel,
+      techs.balena,
+      techs.node,
+      techs.sqlite,
+      techs.docker,
+    ],
+    media: [
+      `${imgRoot}/meters-01.webp`,
+      `${imgRoot}/meters-02.webp`,
+      `${imgRoot}/meters-03.webp`,
+      `${imgRoot}/meters-04.webp`,
+      `${imgRoot}/meters-05.webp`,
+      `${imgRoot}/meters-06.webp`,
+    ],
+    link: 'mailto:hello@naito.one',
+    isContact: true,
+    accentColor: '#3c6285',
+    dark: true,
     reverse: ++count % 2 === 0,
   },
   {

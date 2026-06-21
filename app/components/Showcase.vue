@@ -24,9 +24,13 @@
       >
         <Icon
           class="mr-2 shrink-0"
-          name="material-symbols:open-in-new-rounded"
+          :name="
+            isContact
+              ? 'material-symbols:mail-outline-rounded'
+              : 'material-symbols:open-in-new-rounded'
+          "
         />
-        {{ $t('visitWebsite') }}
+        {{ $t(isContact ? 'getInTouch' : 'visitWebsite') }}
       </a>
     </div>
     <div

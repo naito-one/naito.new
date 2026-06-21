@@ -21,6 +21,7 @@ export default {
   contactShort: 'Contact',
   contact: 'Nous contacter',
   visitWebsite: 'Visiter le Site',
+  getInTouch: 'Intéressé.es ? Prenez contact !',
   showcaseMediaAlt: 'Aperçu n°{n} de {name}',
   allValues: {
     fast: {
