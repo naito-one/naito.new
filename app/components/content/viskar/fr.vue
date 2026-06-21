@@ -17,8 +17,8 @@
     <h5>Points clés du projet</h5>
     <ul>
       <li>
-        Conseiller auprès du chef de projet (estimations des coûts, définitions
-        des priorités)
+        Conseiller technique auprès du chef de projet (estimations des coûts,
+        définitions des priorités)
       </li>
       <li>
         Intégration et accompagnement réguliers de développeurs temporaires
@@ -33,7 +33,7 @@
         2D
       </li>
       <li>
-        Optimisation & équilibrage des performances entre les composants de
+        Optimisation et équilibrage des performances entre les composants de
         l'infrastructure
       </li>
     </ul>

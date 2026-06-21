@@ -13,10 +13,10 @@
           <p>
             We can set up an online or in-person meeting shortly after, to
             discuss your project further.<br />
-            We will gladly provide you with a non-binding, comprehensive time &
-            cost estimate, free of charge.<br />
+            We will gladly provide you with a non-binding, comprehensive time
+            and cost estimate, free of charge.<br />
             We look forward to working with you, from simple landing page to
-            complexe web application.
+            complex web application.
           </p>
         </template>
         <template v-else-if="$i18n.locale === 'fr'">
@@ -24,7 +24,7 @@
             Nous pourrons ensuite rapidement planifier un meeting en ligne ou en
             personne, pour discuter plus en détail de votre projet.<br />
             Nous serions ravis de produire pour vous une estimation claire du
-            temps & des coûts à prévoir, sans engagement et gratuitement.<br />
+            temps et des coûts à prévoir, sans engagement et gratuitement.<br />
             Nous nous réjouissons de travailler avec vous, de la simple landing
             page à l'application web complexe.
           </p>
