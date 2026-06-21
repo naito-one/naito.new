@@ -162,10 +162,6 @@
 .just-text {
   ul {
     @apply ml-8 list-disc leading-relaxed font-light;
-
-    @media (width >= 48rem /* md */) {
-      max-width: calc(100% - 220px);
-    }
   }
 
   p {

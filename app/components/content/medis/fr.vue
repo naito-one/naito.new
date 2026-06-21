@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>EstheMedis : inspirant, rapide et riche en informations</h4>
     <p>
       L'accent a été mis sur une efficacité extrême. Les temps de chargement ont
@@ -15,6 +15,9 @@
       design existant de la marque, épuré et médical, ainsi que de ses polices,
       logos et couleurs.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Points clés du projet</h5>
     <ul>
       <li>Mobile first</li>
@@ -27,6 +30,5 @@
       <li>Création de contenu et conseils marketing pour les visuels</li>
       <li>Représentations abstraites des traitements</li>
     </ul>
-    <slot />
   </div>
 </template>

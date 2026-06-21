@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>BeatenIMMO : l'immobilier rencontre les apps de rencontre</h4>
     <p>
       Profitant du faible volume et de la qualité premium des annonces, une
@@ -11,6 +11,9 @@
       aussi longtemps que vous êtes intéressés, ou glissez vers l'annonce
       suivante. Vous trouverez à coup sûr la maison de vos rêves !
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Points clés du projet</h5>
     <ul>
       <li>Création du logo</li>
@@ -20,6 +23,5 @@
       <li>SEO avancé pour optimiser la visibilité des annonces</li>
       <li>Newsletter et formulaire de contact</li>
     </ul>
-    <slot />
   </div>
 </template>

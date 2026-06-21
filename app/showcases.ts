@@ -12,11 +12,13 @@ import {
 } from '#components'
 import type { Component } from 'vue'
 import type { Locale } from 'vue-i18n'
+import { techs, type Tech } from './technologies'
 
 export interface ShowcaseParams {
   slug: string
   name: string
   content: { [x in Locale]: Component }
+  techs: Tech[]
   media: string[]
   link: string
   accentColor: string
@@ -35,6 +37,22 @@ export const showcases: ShowcaseParams[] = [
       en: ContentViskarEn,
       fr: ContentViskarFr,
     },
+    techs: [
+      techs.angular,
+      techs.tailwind,
+      techs.ts,
+      techs.three,
+      techs.spring,
+      techs.postgre,
+      techs.jooq,
+      techs.flask,
+      techs.celery,
+      techs.redis,
+      techs.cgal,
+      techs.docker,
+      techs.grafana,
+      techs.jenkins,
+    ],
     media: [
       `${imgRoot}/viskar-01.webp`,
       `${imgRoot}/viskar-02.webp`,
@@ -55,6 +73,7 @@ export const showcases: ShowcaseParams[] = [
       en: ContentMedisEn,
       fr: ContentMedisFr,
     },
+    techs: [techs.nuxt, techs.vue, techs.tailwind, techs.ts, techs.pages],
     media: [
       `${imgRoot}/medis-01.webp`,
       `${imgRoot}/medis-02.webp`,
@@ -75,6 +94,7 @@ export const showcases: ShowcaseParams[] = [
       en: ContentMrEn,
       fr: ContentMrFr,
     },
+    techs: [techs.nuxt, techs.vue, techs.tailwind],
     media: [
       `${imgRoot}/mr-01.webp`,
       `${imgRoot}/mr-02.webp`,
@@ -95,6 +115,15 @@ export const showcases: ShowcaseParams[] = [
       en: ContentBeaEn,
       fr: ContentBeaFr,
     },
+    techs: [
+      techs.nuxt,
+      techs.vue,
+      techs.tailwind,
+      techs.ts,
+      techs.drizzle,
+      techs.sqlite,
+      techs.workers,
+    ],
     media: [
       `${imgRoot}/bea-01.webp`,
       `${imgRoot}/bea-02.webp`,
@@ -115,6 +144,7 @@ export const showcases: ShowcaseParams[] = [
       en: ContentCxEn,
       fr: ContentCxFr,
     },
+    techs: [techs.nuxt, techs.vue, techs.tailwind, techs.ts],
     media: [
       `${imgRoot}/cx-01.webp`,
       `${imgRoot}/cx-02.webp`,

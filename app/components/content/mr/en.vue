@@ -1,6 +1,6 @@
 <template>
-  <div class="just-text relative">
-    <h4>Mr. Bidouille: stricking casual nerd’s blog</h4>
+  <div class="just-text">
+    <h4>Mr. Bidouille: stricking casual nerd's blog</h4>
     <p>
       Elegant, smooth, simple. This custom blog is designed for perfect SEO and
       effortless descovery of articles. The interface is in a single language,
@@ -15,6 +15,9 @@
       this tech-savy client who wanted a lightweight website, with no bloat, no
       logins, no maintenance, no strings attached and full creative freedom.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Project Highlights</h5>
     <ul>
       <li>Logo design</li>
@@ -24,6 +27,5 @@
       <li>Multilingual</li>
       <li>Ultra fast & lightweight</li>
     </ul>
-    <slot />
   </div>
 </template>

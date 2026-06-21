@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>Visual KARSYS : application géologique en perpétuelle évolution</h4>
     <p>
       Nous sommes développeurs principaux sur Visual KARSYS, une application web
@@ -11,6 +11,9 @@
       nouveaux développements apportent leur lot de fonctionnalités puissantes
       et inédites.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Points clés du projet</h5>
     <ul>
       <li>
@@ -34,6 +37,5 @@
         l'infrastructure
       </li>
     </ul>
-    <slot />
   </div>
 </template>

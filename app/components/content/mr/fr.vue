@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>Mr. Bidouille : un blog de passionné, sobre et percutant</h4>
     <p>
       Élégant, fluide, simple. Ce blog sur mesure est conçu pour un
@@ -17,6 +17,9 @@
       léger, sans superflu, sans identifiants, sans maintenance, sans contrainte
       et avec une liberté créative totale.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Points clés du projet</h5>
     <ul>
       <li>Création du logo</li>
@@ -28,6 +31,5 @@
       <li>Multilingue</li>
       <li>Ultra-rapide et léger</li>
     </ul>
-    <slot />
   </div>
 </template>

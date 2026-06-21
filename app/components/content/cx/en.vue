@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>C’XOLOGUE: colorful quiet space</h4>
     <p>
       A website made with the heart. A single page, safe to read at your own
@@ -14,6 +14,9 @@
       bloating the website. Tools allow us to rapidly insert new content based
       on the client’s wishes at extremely low cost.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Project Highlights</h5>
     <ul>
       <li>Logo design</li>
@@ -22,6 +25,5 @@
       <li>Optimized search engine ranking</li>
       <li>No-barrier, cheap, regularly updated news section</li>
     </ul>
-    <slot />
   </div>
 </template>

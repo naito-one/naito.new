@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>C’XOLOGUE : un espace calme et coloré</h4>
     <p>
       Un site web fait avec le cœur. Une page unique, à lire en toute sérénité,
@@ -16,6 +16,9 @@
       du nouveau contenu selon les souhaits du client, à un coût extrêmement
       faible.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Points clés du projet</h5>
     <ul>
       <li>Création du logo</li>
@@ -27,6 +30,5 @@
         régulièrement
       </li>
     </ul>
-    <slot />
   </div>
 </template>

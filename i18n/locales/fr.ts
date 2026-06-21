@@ -58,4 +58,34 @@ export default {
     'Vous souhaitez mettre votre projet entre de bonnes mains ? Envoyez-nous un email !',
   dark: 'Passez en mode sombre',
   light: 'Passer en mode clair',
+  tech: {
+    nuxt: 'Nuxt: Le framework Vue full-stack',
+    vue: 'Vue.js: Le framework JavaScript progressif',
+    ts: 'TypeScript: JavaScript avec typage syntaxique',
+    angular: 'Angular: Le framework web pour construire des apps modernes',
+    three: 'Three.js: Bibliothèque 3D pour JavaScript',
+    tailwind:
+      'Tailwind CSS: Framework CSS utilitaire pour construire rapidement des sites modernes',
+    spring:
+      'Spring: Rendre la programmation Java plus rapide, simple et sûre pour tous',
+    postgre:
+      'PostgreSQL: La base de données open source la plus avancée au monde',
+    jooq: 'jOOQ: La façon la plus simple d’écrire du SQL en Java',
+    flask: 'Flask: Framework web Python évolutif jusqu’à des apps complexes',
+    celery: 'Celery: File d’attente de tâches distribuée',
+    redis: 'Redis: Données temps réel pour agents et applications',
+    cgal: 'CGAL: La bibliothèque d’algorithmes de géométrie computationnelle',
+    workers: 'Cloudflare Workers: Plateforme globale de fonctions serverless',
+    pages:
+      'Cloudflare Pages: Plateforme JAMstack pour collaborer et déployer des sites web',
+    drizzle: 'Drizzle ORM: ORM TypeScript nouvelle génération',
+    balena: 'Balena: Gestion puissante des appareils IoT simplifiée',
+    node: 'Node.js: Exécutez JavaScript partout',
+    laravel: 'Laravel: Le stack claire pour Artisans et agents',
+    docker: 'Docker: Développement d’applications conteneurisées accéléré',
+    sqlite:
+      'SQLite: Système de gestion de base de données relationnelle sans serveur',
+    grafana: 'Grafana: Observabilité full-stack pour l’ère des agents',
+    jenkins: 'Jenkins: Outil d’intégration continue',
+  },
 }

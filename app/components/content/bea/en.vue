@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>BeatenIMMO: real estate meets dating app</h4>
     <p>
       Taking advantage of the low volume and premium quality of the listings, a
@@ -11,6 +11,9 @@
       you’re interested, otherwise swipe to the next. You will find your dream
       home !
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Project Highlights</h5>
     <ul>
       <li>Logo design</li>
@@ -20,6 +23,5 @@
       <li>Advanced SEO for listings discoverability</li>
       <li>Newsletter, contact form</li>
     </ul>
-    <slot />
   </div>
 </template>

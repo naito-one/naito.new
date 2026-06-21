@@ -57,4 +57,32 @@ export default {
     'Want to put your project in good hands ? Shoot us an email !',
   dark: 'Switch to dark theme',
   light: 'Switch to light theme',
+  tech: {
+    nuxt: 'Nuxt: The Full-Stack Vue Framework',
+    vue: 'Vue.js: The Progressive JavaScript Framework',
+    ts: 'TypeScript: JavaScript With Syntax For Types',
+    angular: 'Angular: The web development framework for building modern apps',
+    three: 'Three.js: JavaScript 3D Library',
+    tailwind:
+      'Tailwind CSS: Utility-first CSS framework for rapidly building modern websites',
+    spring:
+      'Spring: Makes programming Java quicker, easier and safer for everybody',
+    postgre: "PostgreSQL: The world's most advanced open source database",
+    jooq: 'jOOQ: The easiest way to write SQL in Java',
+    flask: 'Flask: Python web framework scalable to complex applications',
+    celery: 'Celery: Distributed Task Queue',
+    redis: 'Redis: Real-time data for agents & apps',
+    cgal: 'CGAL: The Computational Geometry Algorithms Library',
+    workers: 'Cloudflare Workers: Global Serverless Functions Platform',
+    pages:
+      'Cloudflare Pages: JAMstack platform for frontend developers to collaborate and deploy websites',
+    drizzle: 'Drizzle ORM: Next gen TypeScript ORM',
+    balena: 'Balena: Powerful IoT device management made simple',
+    node: 'Node.js: Run JavaScript Everywhere',
+    laravel: 'Laravel: The clean stack for Artisans and agents',
+    docker: 'Docker: Accelerated Container Application Development',
+    sqlite: 'SQLite: Serverless relational database management system',
+    grafana: 'Grafana: Full-stack observability for the agentic era',
+    jenkins: 'Jenkins: Continuous integration tool',
+  },
 }

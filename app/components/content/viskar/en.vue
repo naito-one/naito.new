@@ -1,5 +1,5 @@
 <template>
-  <div class="just-text relative">
+  <div class="just-text">
     <h4>Visual KARSYS: constantly evolving geological webapp</h4>
     <p>
       We are lead developers on Visual KARSYS, a free web application to study
@@ -9,6 +9,9 @@
       user must be led forward, while new developments bring bucketloads of new
       powerful features.
     </p>
+  </div>
+  <slot />
+  <div class="just-text">
     <h5>Project Highlights</h5>
     <ul>
       <li>Advisor to the project manager (cost estimates, priorities)</li>
@@ -20,6 +23,5 @@
         Performance optimizations & balancing between infrastructure components
       </li>
     </ul>
-    <slot />
   </div>
 </template>

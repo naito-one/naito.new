@@ -2,22 +2,32 @@
   <section
     :class="`flex flex-col-reverse items-center gap-8 xl:flex-row xl:gap-16 ${reverse ? 'xl:flex-row-reverse' : ''}`"
   >
-    <div class="grow basis-0">
+    <div class="flex grow basis-0 flex-col">
       <component :is="content[$i18n.locale]">
-        <a
-          :href="link"
-          target="__blank"
-          referrerpolicy="no-referrer"
-          :class="`hover:shadow-xl-wide right-0 bottom-0 mt-8 inline-flex items-center rounded-xl px-6 py-3 font-medium shadow-lg transition duration-200 active:shadow-lg md:absolute md:mt-0 ${dark ? 'text-white hover:brightness-110 active:brightness-95' : 'text-black/80 hover:brightness-105 active:brightness-98'}`"
-          :style="{ backgroundColor: accentColor }"
-        >
-          <Icon
-            class="mr-2 shrink-0"
-            name="material-symbols:open-in-new-rounded"
-          />
-          {{ $t('visitWebsite') }}
-        </a></component
+        <ul class="mt-8 flex flex-wrap justify-center gap-4">
+          <li class="shrink-0" v-for="tech in techs" :key="tech.slug">
+            <img
+              class="size-8 cursor-help select-none"
+              :src="`/images/tech/${tech.slug}.${tech.format}`"
+              :alt="$t(`tech.${tech.slug}`)"
+              :title="$t(`tech.${tech.slug}`)"
+            />
+          </li>
+        </ul>
+      </component>
+      <a
+        :href="link"
+        target="__blank"
+        referrerpolicy="no-referrer"
+        :class="`hover:shadow-xl-wide mt-8 inline-flex items-center self-center rounded-xl px-6 py-3 font-medium shadow-lg transition duration-200 active:shadow-lg ${dark ? 'text-white hover:brightness-110 active:brightness-95' : 'text-black/80 hover:brightness-105 active:brightness-98'}`"
+        :style="{ backgroundColor: accentColor }"
       >
+        <Icon
+          class="mr-2 shrink-0"
+          name="material-symbols:open-in-new-rounded"
+        />
+        {{ $t('visitWebsite') }}
+      </a>
     </div>
     <div
       class="flex grow basis-0 flex-col gap-4 md:gap-0"
