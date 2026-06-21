@@ -50,7 +50,7 @@ export default {
     proud: {
       header: 'Proud web',
       content:
-        'No AI content slop, no AI training from our client’s content, no sneaky profiling, human-readable policies, sharing of code & resources & knowledge. Contribution to open source projects.',
+        'No AI content slop, no AI training from our client’s content, no sneaky profiling, human-readable policies, sharing of code & resources & knowledge, contribution to open source projects.',
     },
   },
   contactTagLine:

@@ -1,8 +1,10 @@
 <template>
   <SectionHeader v-bind="sections[2]!" />
-  <div class="bg-nt1-offwhite -mt-16 pb-2 sm:pb-4 md:pb-[10vh] dark:bg-black">
+  <div
+    class="bg-nt1-offwhite dark:bg-nt1-offblack -mt-16 flex pb-2 sm:pb-4 md:pb-[10vh]"
+  >
     <div
-      class="dark:bg-nt1-offblack mx-2 flex flex-col items-center rounded-b-2xl bg-white px-4 pt-20 sm:mx-4 sm:px-8 md:mx-auto md:w-2xl lg:w-4xl xl:w-5xl dark:text-white"
+      class="mx-2 mt-20 flex flex-col items-center rounded-2xl bg-white px-4 pt-8 sm:mx-4 sm:px-8 sm:pt-12 md:mx-auto md:w-2xl lg:w-4xl xl:mt-28 xl:w-5xl dark:bg-black dark:text-white"
     >
       <h4 class="mb-4 text-center text-3xl">{{ $t('contactTagLine') }}</h4>
 
@@ -33,7 +35,7 @@
 
         <a
           href="mailto:hello@naito.one"
-          class="absolute top-0 left-0 flex h-full w-full items-center justify-center text-2xl font-semibold text-white"
+          class="absolute top-0 left-0 flex h-full w-full items-center justify-center text-xl font-semibold text-white sm:text-2xl"
           ><span>hello@naito.one</span></a
         >
       </div>

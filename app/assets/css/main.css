@@ -71,7 +71,7 @@
   }
 
   & .with-dark-overlay::after {
-    @apply bg-neutral-800/50;
+    @apply bg-neutral-800/70;
     display: block;
     content: '';
     position: absolute;

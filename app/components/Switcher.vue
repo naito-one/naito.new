@@ -1,7 +1,7 @@
 <template>
   <input type="checkbox" name="dark-mode" id="dark-mode" class="hidden" />
   <div
-    class="fixed top-[90vh] right-0 z-30 flex gap-4 p-5 select-none lg:top-0"
+    class="fixed right-0 bottom-0 z-30 flex gap-4 p-5 select-none lg:top-0 lg:bottom-auto"
   >
     <label
       for="dark-mode"

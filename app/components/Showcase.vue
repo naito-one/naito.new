@@ -20,7 +20,7 @@
       >
     </div>
     <div
-      class="flex grow basis-0 flex-col-reverse gap-4 md:flex-col md:gap-0"
+      class="flex grow basis-0 flex-col gap-4 md:gap-0"
       @mouseenter="
         () => {
           hovered = true
@@ -101,6 +101,7 @@ import type { RouteLocationNormalized } from 'vue-router'
 import type { ShowcaseParams } from '~/showcases'
 
 const router = useRouter()
+const isMobile = useIsMobile()
 
 const props = defineProps<ShowcaseParams>()
 
@@ -173,7 +174,7 @@ function timeoutToScroll() {
 }
 
 function updateShouldRun() {
-  if (visible.value && !hovered.value) {
+  if (visible.value && !hovered.value && !isMobile.value) {
     if (!timeout) {
       timeoutToScroll()
     }
@@ -200,6 +201,8 @@ const onNavigate = (to: RouteLocationNormalized) => {
     }
   }
 }
+
+watch(isMobile, updateShouldRun)
 
 let observer: IntersectionObserver | null = null
 

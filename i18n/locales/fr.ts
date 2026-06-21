@@ -51,7 +51,7 @@ export default {
     proud: {
       header: 'Web fier',
       content:
-        "Pas de contenu bâclé IA, pas d'entrainement IA sur les données de nos clients, pas de profilage sournois, règles compréhensibles par des humains, partage de code & resources & connaissances. Contribution à des projets open source.",
+        "Pas de contenu bâclé IA, pas d'entrainement IA sur les données de nos clients, pas de profilage sournois, règles compréhensibles par des humains, partage de code & resources & connaissances, contribution à des projets open source.",
     },
   },
   contactTagLine:
