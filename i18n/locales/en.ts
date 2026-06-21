@@ -85,5 +85,7 @@ export default {
     sqlite: 'SQLite: Serverless relational database management system',
     grafana: 'Grafana: Full-stack observability for the agentic era',
     jenkins: 'Jenkins: Continuous integration tool',
+    maria:
+      "MariaDB: One of the world's most popular open source relational databases",
   },
 }

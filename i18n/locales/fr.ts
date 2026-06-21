@@ -88,5 +88,7 @@ export default {
       'SQLite: Système de gestion de base de données relationnelle sans serveur',
     grafana: 'Grafana: Observabilité full-stack pour l’ère des agents',
     jenkins: 'Jenkins: Outil d’intégration continue',
+    maria:
+      "MariaDB : L'une des bases de données relationnelles open source les plus populaires au monde",
   },
 }

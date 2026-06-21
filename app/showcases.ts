@@ -81,6 +81,7 @@ export const showcases: ShowcaseParams[] = [
       techs.vue,
       techs.tailwind,
       techs.laravel,
+      techs.maria,
       techs.balena,
       techs.node,
       techs.sqlite,

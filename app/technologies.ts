@@ -96,4 +96,8 @@ export const techs = {
     slug: 'jenkins',
     format: 'webp',
   } as Tech,
+  maria: {
+    slug: 'maria',
+    format: 'svg',
+  } as Tech,
 } as const
