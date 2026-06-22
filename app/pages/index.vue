@@ -7,9 +7,9 @@
 <script setup lang="ts">
 const router = useRouter()
 
-defineOgImageComponent('NaitoOne', {
+defineOgImage('NaitoOne', {
   title: $t('nuxtSiteConfig.name'),
-  description: $t('nuxtSiteConfig.description')
+  description: $t('nuxtSiteConfig.description'),
 })
 
 onMounted(() => {

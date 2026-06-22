@@ -4,7 +4,9 @@
     class="bg-nt1-offwhite font-content text-nt1-offblack dark:bg-nt1-offblack"
   >
     <Switcher />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </Body>
 </template>
 <script setup lang="ts">

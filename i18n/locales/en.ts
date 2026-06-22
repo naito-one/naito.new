@@ -3,8 +3,8 @@ export default {
     name: 'Naito One',
     description: 'Beautiful and Efficient websites',
   },
-  previous: 'Previous slide',
-  next: 'Next slide',
+  previous: 'Previous slide of {name}',
+  next: 'Next slide of {name}',
   senior: 'Senior Full-Stack Dev',
   ceo: 'Naito One CEO',
   beautiful: 'Beautiful',
@@ -19,8 +19,8 @@ export default {
   values: 'Our values',
   contactShort: 'Contact',
   contact: 'Contact us',
-  visitWebsite: 'Visit Website',
-  getInTouch: 'Interrested ? Get in touch !',
+  visitWebsite: 'Visit the {name} Website',
+  getInTouch: 'Interrested in {name} ? Get in touch !',
   showcaseMediaAlt: 'Preview n°{n} of {name}',
   allValues: {
     fast: {

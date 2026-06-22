@@ -1,10 +1,3 @@
-<script setup lang="ts">
-defineProps<{
-  title?: string
-  description?: string
-}>()
-</script>
-
 <template>
   <div
     class="text-nt1-offblack relative flex h-full w-full items-center justify-center bg-neutral-100"
@@ -27,3 +20,9 @@ defineProps<{
     <div class="absolute right-12 bottom-12 text-2xl font-bold">naito.one</div>
   </div>
 </template>
+<script setup lang="ts">
+defineProps<{
+  title?: string
+  description?: string
+}>()
+</script>

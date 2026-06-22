@@ -3,8 +3,8 @@ export default {
     name: 'Naito One',
     description: 'Des sites web Beaux et Efficaces',
   },
-  previous: 'Slide précédente',
-  next: 'Slide suivante',
+  previous: 'Slide précédente de {name}',
+  next: 'Slide suivante de {name}',
   senior: 'Dev Full-Stack Senior',
   ceo: 'PDG Naito One',
   beautiful: 'Beau',
@@ -20,8 +20,8 @@ export default {
   values: 'Nos valeurs',
   contactShort: 'Contact',
   contact: 'Nous contacter',
-  visitWebsite: 'Visiter le Site',
-  getInTouch: 'Intéressé.es ? Prenez contact !',
+  visitWebsite: 'Visiter le Site {name}',
+  getInTouch: 'Intéressé·e·s par {name} ? Prenez contact !',
   showcaseMediaAlt: 'Aperçu n°{n} de {name}',
   allValues: {
     fast: {

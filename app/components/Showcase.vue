@@ -30,7 +30,7 @@
               : 'material-symbols:open-in-new-rounded'
           "
         />
-        {{ $t(isContact ? 'getInTouch' : 'visitWebsite') }}
+        {{ $t(isContact ? 'getInTouch' : 'visitWebsite', { name }) }}
       </a>
     </div>
     <div
@@ -80,7 +80,7 @@
         </li>
       </ul>
       <div class="flex justify-center gap-4" v-if="media.length > 1">
-        <button @click="previous()">
+        <button @click="previous()" :title="$t('previous', { name })">
           <Icon
             class="size-10 shrink-0"
             name="material-symbols:arrow-left-rounded"
@@ -97,10 +97,11 @@
                   : 'bg-nt1-offblack/50 dark:bg-white/50'
               "
               @click="goTo($event, i)"
+              :title="$t('showcaseMediaAlt', { n: i + 1, name })"
             ></a>
           </li>
         </ul>
-        <button @click="next()">
+        <button @click="next()" :title="$t('next', { name })">
           <Icon
             class="size-10 shrink-0"
             name="material-symbols:arrow-right-rounded"
