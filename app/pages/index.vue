@@ -9,7 +9,7 @@ const router = useRouter()
 
 defineOgImageComponent('NaitoOne', {
   title: $t('nuxtSiteConfig.name'),
-  image: '/images/logo.png',
+  description: $t('nuxtSiteConfig.description')
 })
 
 onMounted(() => {
