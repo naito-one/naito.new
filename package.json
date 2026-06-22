@@ -20,6 +20,7 @@
     "bezier-easing": "^2.1.0",
     "lodash.throttle": "^4.1.1",
     "nuxt": "^4.0.3",
+    "nuxt-schema-org": "^6.2.1",
     "tailwindcss": "^4.3.1",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.5.30",

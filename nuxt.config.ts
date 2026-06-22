@@ -80,16 +80,18 @@ export default defineNuxtConfig({
       email: 'hello@naito.one',
 
       // Additional Business Properties, if applicable
-      slogan: 'Design for Modern Living',
+      slogan: 'Beautiful and Efficient websites',
       keywords: [
-        'modern furniture',
-        'scandinavian design',
-        'home decor',
-        'minimalist furniture',
-        'contemporary home',
+        'web development',
+        'fullstack',
+        'project management',
+        'webapp',
+        'service',
+        'IoT',
+        'sensors',
       ],
 
-      foundingDate: '2015-01-01',
+      foundingDate: '2019-07-12',
 
       contactPoint: [
         {
