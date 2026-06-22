@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
-import { defineOrganization } from 'nuxt-schema-org/schema'
+import { defineOrganization, type ImageObject } from 'nuxt-schema-org/schema'
 import svgLoader from 'vite-svg-loader'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -76,8 +76,11 @@ export default defineNuxtConfig({
     identity: defineOrganization({
       '@type': 'OnlineBusiness',
       name: 'Naito One',
-      logo: '/images/logo.png',
+      description:
+        'Swiss company creating innovative IT solutions founded in 2019',
+      logo: { url: '/images/logo.png' },
       email: 'hello@naito.one',
+      sameAs: ['https://github.com/naito-one'],
 
       // Additional Business Properties, if applicable
       slogan: 'Beautiful and Efficient websites',
