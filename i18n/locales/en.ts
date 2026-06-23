@@ -20,7 +20,7 @@ export default {
   contactShort: 'Contact',
   contact: 'Contact us',
   visitWebsite: 'Visit the {name} Website',
-  getInTouch: 'Interrested in {name} ? Get in touch !',
+  getInTouch: 'Interested in {name} ? Get in touch !',
   showcaseMediaAlt: 'Preview n°{n} of {name}',
   allValues: {
     fast: {

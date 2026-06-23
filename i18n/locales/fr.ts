@@ -21,28 +21,28 @@ export default {
   contactShort: 'Contact',
   contact: 'Nous contacter',
   visitWebsite: 'Visiter le Site {name}',
-  getInTouch: 'Intéressé·e·s par {name} ? Prenez contact !',
+  getInTouch: 'Intéressé par {name} ? Prenez contact !',
   showcaseMediaAlt: 'Aperçu n°{n} de {name}',
   allValues: {
     fast: {
       header: 'Web rapide',
       content:
-        'Pas de poids mort, pas de backend sauf si nécéssaire, efficace par design, code et médias optimisés.',
+        'Pas de poids mort, pas de backend sauf si nécessaire, efficace par design, code et médias optimisés.',
     },
     safe: {
       header: 'Web sécurisé',
       content:
-        "Minimum de dépendences, pas de CMS/panneau admin sauf si nécéssaire, sécurité du code et de l'infrastructure par design.",
+        "Minimum de dépendences, pas de CMS/panneau admin sauf si nécessaire, sécurité du code et de l'infrastructure par design.",
     },
     private: {
       header: 'Web privé',
       content:
-        'Pas de cookies sauf si nécéssaire, suivi seulement avec consentement informé, aller plus loin que les lois sur le respect de la vie privée, sites web majoritairement fonctionnels sans JavaScript.',
+        'Pas de cookies sauf si nécessaire, suivi seulement avec consentement informé, aller plus loin que les lois sur le respect de la vie privée, sites web majoritairement fonctionnels sans JavaScript.',
     },
     future: {
       header: 'Web évolutif',
       content:
-        'Minimum de dépendences, pas de CMS/panneau admin sauf si nécéssaire, dernières technologies stables, code source lisible et facile à migrer, stacks open source.',
+        'Minimum de dépendences, pas de CMS/panneau admin sauf si nécessaire, dernières technologies stables, code source lisible et facile à migrer, stacks open source.',
     },
     inclusive: {
       header: 'Web inclusif',
@@ -52,7 +52,7 @@ export default {
     proud: {
       header: 'Web fier',
       content:
-        "Pas de contenu bâclé IA, pas d'entrainement IA sur les données de nos clients, pas de profilage sournois, règles compréhensibles par des humains, partage de code & resources & connaissances, contribution à des projets open source.",
+        "Pas de contenu bâclé IA, pas d'entrainement IA sur les données de nos clients, pas de profilage sournois, règles compréhensibles par des humains, partage de code & ressources & connaissances, contribution à des projets open source.",
     },
   },
   contactTagLine:

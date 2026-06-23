@@ -4,7 +4,7 @@
     <p>
       The focus was put on extreme efficiency. Loading times where reduced by
       several seconds compared to the old bloated Wordpress-based website. The
-      content was completly rethought and simplified with the client, following
+      content was completely rethought and simplified with the client, following
       a new approach: the website must satisfy the curiosity of casual visitors
       while leading them to book a free consultation, while also allowing
       informed users to learn about the science behind the available treatments.

@@ -13,7 +13,7 @@
     <p>
       Le contenu est rédigé à l'aide de blocs HTML prédéfinis, et le
       versionnement/les publications se font via Git, ce qui s'est avéré être un
-      bon compromis pour ce client férru de technologie qui souhaitait un site
+      bon compromis pour ce client féru de technologie qui souhaitait un site
       léger, sans superflu, sans identifiants, sans maintenance, sans contrainte
       et avec une liberté créative totale.
     </p>
