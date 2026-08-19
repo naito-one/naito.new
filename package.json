@@ -36,25 +36,5 @@
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "0.6.14",
     "sass": "^1.101.0"
-  },
-  "pnpm": {
-    "supportedArchitectures": {
-      "os": [
-        "current",
-        "linux"
-      ],
-      "cpu": [
-        "current",
-        "x64"
-      ]
-    },
-    "overrides": {
-      "sharp": "0.33.4"
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@tailwindcss/oxide",
-      "sharp"
-    ]
   }
 }

@@ -3,6 +3,3 @@ allowBuilds:
   esbuild: true
   sharp: true
   vue-demi: true
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - sharp
