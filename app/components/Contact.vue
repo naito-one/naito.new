@@ -9,7 +9,7 @@
       <h4 class="mb-4 text-center text-3xl">{{ $t('contactTagLine') }}</h4>
 
       <div class="text-center leading-relaxed font-light">
-        <template v-if="$i18n.locale === 'en'">
+        <template v-if="locale === 'en'">
           <p>
             We can set up an online or in-person meeting shortly after, to
             discuss your project further.<br />
@@ -19,7 +19,7 @@
             complex web application.
           </p>
         </template>
-        <template v-else-if="$i18n.locale === 'fr'">
+        <template v-else-if="locale === 'fr'">
           <p>
             Nous pourrons ensuite rapidement planifier un meeting en ligne ou en
             personne, pour discuter plus en détail de votre projet.<br />
@@ -44,4 +44,6 @@
 </template>
 <script setup lang="ts">
 import { sections } from '~/sections'
+
+const { locale } = useI18n()
 </script>

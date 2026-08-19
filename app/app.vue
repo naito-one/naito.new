@@ -5,8 +5,11 @@
 </template>
 <script setup lang="ts">
 import '~/scrollEndPolyfill'
+import { findBrowserLocale } from '#i18n-kit/browser'
+import { normalizedLocales } from '#build/i18n-options.mjs'
+import type { Locale } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t, locale, setLocale } = useI18n()
 
 useHead({
   titleTemplate: (titleChunk) => {
@@ -14,5 +17,13 @@ useHead({
       ? `${titleChunk} | ${t('nuxtSiteConfig.name')}`
       : t('nuxtSiteConfig.name')
   },
+})
+
+onMounted(() => {
+  const wantedLocale = findBrowserLocale(normalizedLocales, navigator.languages) as Locale
+
+  if (locale.value !== wantedLocale) {
+    setLocale(wantedLocale)
+  }
 })
 </script>

@@ -127,8 +127,6 @@ export default defineNuxtConfig({
         file: 'fr.ts',
       },
     ],
-    detectBrowserLanguage: {
-      useCookie: false,
-    },
+    detectBrowserLanguage: false,
   },
 })

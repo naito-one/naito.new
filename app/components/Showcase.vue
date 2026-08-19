@@ -3,7 +3,7 @@
     :class="`flex flex-col-reverse items-center gap-8 xl:flex-row xl:gap-16 ${reverse ? 'xl:flex-row-reverse' : ''}`"
   >
     <div class="flex grow basis-0 flex-col">
-      <component :is="content[$i18n.locale]">
+      <component :is="content[locale]">
         <ul class="mt-8 flex flex-wrap justify-center gap-4">
           <li class="shrink-0" v-for="tech in techs" :key="tech.slug">
             <img
@@ -115,6 +115,7 @@
 import type { RouteLocationNormalized } from 'vue-router'
 import type { ShowcaseParams } from '~/showcases'
 
+const { locale } = useI18n()
 const router = useRouter()
 const isMobile = useIsMobile()
 
